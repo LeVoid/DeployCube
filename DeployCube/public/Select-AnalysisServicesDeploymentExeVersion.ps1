@@ -44,14 +44,14 @@ function Select-AnalysisServicesDeploymentExeVersion {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true)]
-        [ValidateSet('16', '15', '14', '13', '12', '11', 'latest')]
+        [ValidateSet('20', '16', '15', '14', '13', '12', '11', 'latest')]
         [string] $PreferredVersion
     )
 
     try {
         [string]$ExeName = "Microsoft.AnalysisServices.Deployment.exe";
         $specificVersion = $PreferredVersion -and $PreferredVersion -ne 'latest'
-        $versions = '16', '15', '14', '13', '12', '11' | Where-Object { $_ -ne $PreferredVersion }
+        $versions = '20', '16', '15', '14', '13', '12', '11' | Where-Object { $_ -ne $PreferredVersion }
 
         # Look for a specific version of Microsoft SQL Server SSAS deployment tool
         if ($specificVersion) {

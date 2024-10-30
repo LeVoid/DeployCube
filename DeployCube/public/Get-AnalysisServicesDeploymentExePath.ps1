@@ -51,7 +51,7 @@ function Get-AnalysisServicesDeploymentExePath {
     param(
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [ValidateSet('16', '15', '14', '13', '12', '11')]
+        [ValidateSet('20', '16', '15', '14', '13', '12', '11')]
         [string]$Version
     )
 

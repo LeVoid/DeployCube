@@ -100,7 +100,7 @@ function Publish-Cube {
         $CubeDatabase,
 
         [String] [Parameter(Mandatory = $false)]
-        [ValidateSet('16', '15', '14', '13', '12', '11', 'latest')]
+        [ValidateSet('20', '16', '15', '14', '13', '12', '11', 'latest')]
         $PreferredVersion = 'latest',
 
         [String] [Parameter(Mandatory = $false)]
